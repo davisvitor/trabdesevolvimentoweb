@@ -22,3 +22,25 @@ themeToggleBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
+
+// Alterar conteúdo de um elemento
+document.getElementById('change-text').addEventListener('click', () => {
+    document.querySelector('#about h2').innerText = "Minha História Profissional";
+});
+
+// Alterar atributo de um elemento
+document.getElementById('change-bg').addEventListener('click', () => {
+    document.getElementById('hero').style.backgroundImage = "url('https://via.placeholder.com/1600x900/ff0000/ffffff?text=Novo+Fundo')";
+});
+
+// Alterar estilos CSS
+document.getElementById('change-style').addEventListener('click', () => {
+    document.getElementById('projects').style.backgroundColor = "#ff5733";
+    document.getElementById('skills').style.backgroundColor = "#ff5733";
+});
+
+// Ocultar/Exibir elementos
+document.getElementById('toggle-projects').addEventListener('click', () => {
+    const projects = document.getElementById('projects');
+    projects.style.display = projects.style.display === "none" ? "block" : "none";
+});
